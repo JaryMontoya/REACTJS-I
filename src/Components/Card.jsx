@@ -5,6 +5,8 @@ const Card = () => {
 
   return (
     <div>
-      { /* Imagen del producto */}
+      { /iphone.jpg/}
       
-<div/>      
+<div/>      </div>);
+};
+
