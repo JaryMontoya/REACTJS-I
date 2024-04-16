@@ -12,7 +12,6 @@ function ProductList() {
      .then(products => setProducts(products));
   }, []); // La matriz vacía [] indica que el efecto solo se ejecutará una vez, al montar el componente
 
-  // Renderiza la lista de productos
   return (
     <div>
       <h1>Lista de productos</h1>
@@ -21,7 +20,7 @@ function ProductList() {
           <li key={product.id}>
             <h2>{product.title}</h2>
             <p>Precio: ${product.price}</p>
-            <img src={product.image} alt={product.title} />
+            <img src={iphone.img} alt={product.title} />
             <p>{product.description}</p>
           </li>
         ))}
@@ -37,7 +36,7 @@ fetch('https://fakestoreapi.com/products',{
             method:"POST",
             body:JSON.stringify(
                 {
-                    title: 'test product',
+                    title: 'Televisor',
                     price: 13.5,
                     description: 'lorem ipsum set',
                     image: 'https://i.pravatar.cc',
@@ -52,7 +51,7 @@ fetch('https://fakestoreapi.com/products',{
             method:"PUT",
             body:JSON.stringify(
                 {
-                    title: 'test product',
+                    title: 'Teléfono',
                     price: 13.5,
                     description: 'lorem ipsum set',
                     image: 'https://i.pravatar.cc',
@@ -67,7 +66,7 @@ fetch('https://fakestoreapi.com/products',{
                 method:"PATCH",
                 body:JSON.stringify(
                     {
-                        title: 'test product',
+                        title: 'Audífonos',
                         price: 13.5,
                         description: 'lorem ipsum set',
                         image: 'https://i.pravatar.cc',
